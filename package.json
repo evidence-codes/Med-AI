@@ -8,6 +8,7 @@
     "start": "node ./dist/app.js",
     "dev": "nodemon ./src/app.ts"
   },
+  "type": "module",
   "author": "Evidence Adejuwon",
   "license": "ISC",
   "dependencies": {
