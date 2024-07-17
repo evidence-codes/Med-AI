@@ -1,29 +1,29 @@
 class Validator {
-  async isRequired(value: any) {
+  isRequired(value: any) {
     return value !== undefined && value !== null && value !== "";
   }
 
-  async isEmail(value: any) {
+  isEmail(value: any) {
     return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value);
   }
 
-  async isNumber(value: any) {
+  isNumber(value: any) {
     return /^\d+$/.test(value);
   }
 
-  async isUrl(value: any) {
+  isUrl(value: any) {
     return /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/.test(
       value
     );
   }
 
-  async isBoolean(value: any) {
+  isBoolean(value: any) {
     return value === "true" || value === "false";
   }
 
-  async isString(value: any) {
+  isString(value: any) {
     return typeof value === "string";
   }
 }
 
-module.exports = Validator;
+export default Validator;
